@@ -1,2 +1,2 @@
-# GEANT4-MinimalWorkingExample-DetectorMessenger
+# GEANT4-MinimalWorkingExample4-DetectorMessenger
 The commint and push is coming very soon...
