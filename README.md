@@ -1,2 +1,2 @@
-# GEANT4-MinimalExample4-DetectorMessenger
+# GEANT4-MinimalExample4-MessengerClasses
 The commint and push is coming very soon ...
