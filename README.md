@@ -1,2 +1,2 @@
-# GEANT4-MinimalExample4-DynamicLabels
+# GEANT4-Example4-MaterialsAndLabels
 The commint and push is coming very soon ...
