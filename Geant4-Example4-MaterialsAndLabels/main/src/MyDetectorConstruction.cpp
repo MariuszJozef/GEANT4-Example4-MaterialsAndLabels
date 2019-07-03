@@ -15,7 +15,9 @@
 MyDetectorConstruction::MyDetectorConstruction()
 : G4VUserDetectorConstruction(),
   halfLabSize(G4ThreeVector(30*cm, 30*cm, 30*cm)),
-  displayMaterialLabels(true)
+  displayMaterialLabels(true),
+  labelParticleGunName(""),
+  labelParticleGunEnergy(0.0)
 {
 	myDetectorMessenger = new MyDetectorMessenger(this);
 }

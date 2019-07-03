@@ -83,7 +83,7 @@ void MyPrimaryGeneratorAction::SetGunPosition(G4ThreeVector gunPosition)
 	}
 }
 
-bool MyPrimaryGeneratorAction::IsGunInsideLab(G4ThreeVector gunPosition) const
+G4bool MyPrimaryGeneratorAction::IsGunInsideLab(G4ThreeVector gunPosition) const
 {
 	if (  ( abs(gunPosition.x()) <= halfLabSize.x() ) &&
 		  ( abs(gunPosition.y()) <= halfLabSize.y() ) &&
@@ -91,7 +91,7 @@ bool MyPrimaryGeneratorAction::IsGunInsideLab(G4ThreeVector gunPosition) const
 		)
 		return true;
 	else
-		false;
+		return false;
 }
 
 G4ThreeVector MyPrimaryGeneratorAction::GetUnitThreeVector(const G4ThreeVector aThreeVector) const

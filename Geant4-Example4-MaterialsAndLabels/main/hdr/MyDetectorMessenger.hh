@@ -27,7 +27,6 @@ private:
 	G4UIcmdWithAString *setTetrahedronMaterialCmd;
 	G4UIcmdWithAString *setTorusMaterialCmd;
 	G4UIcmdWithABool *setMaterialLabelsCmd;
-	G4UIcmdWithoutParameter *setDisplayLabelsCmd;
 };
 
 #endif /* HDR_MYDETECTORMESSENGER_HH_ */

@@ -90,7 +90,7 @@ private:
 	G4Material *coneMaterial = nullptr;
 	G4Material *torusMaterial = nullptr;
 
-	bool displayMaterialLabels = true;
+	G4bool displayMaterialLabels = true;
 	G4String labelParticleGunName;
 	G4double labelParticleGunEnergy;
 

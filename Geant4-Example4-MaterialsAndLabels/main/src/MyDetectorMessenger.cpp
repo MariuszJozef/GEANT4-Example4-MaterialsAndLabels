@@ -60,7 +60,6 @@ MyDetectorMessenger::~MyDetectorMessenger()
 	delete setTetrahedronMaterialCmd;
 	delete setTorusMaterialCmd;
 	delete setMaterialLabelsCmd;
-	delete setDisplayLabelsCmd;
 }
 
 void MyDetectorMessenger::SetNewValue(G4UIcommand* command, G4String newValue)
