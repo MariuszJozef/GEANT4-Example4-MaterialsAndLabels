@@ -1,0 +1,11 @@
+# At Qt prompt: /control/execute run2.mac
+
+/gun/particle e+
+/gun/energy 190 keV
+/gun/direction 0 0 0
+/beam/randomDistribution gaussian 0.1
+/run/beamOn 13
+
+/material/sphere Titanium
+/material/showLabels true
+/run/beamOn 13

@@ -1,0 +1,14 @@
+# At Qt prompt: /control/execute run3.mac
+
+/gun/position 0 0 -30 cm
+/gun/direction 4 2 31
+/gun/particle gamma
+/gun/energy 0.02 GeV
+/beam/randomDistribution uniform 0.1
+/run/beamOn 6
+
+/material/trapezoid G4_WATER_VAPOR
+/material/tetrahedron Lead
+/material/cone Aluminium
+/gun/direction -13 2 30
+/run/beamOn 4
