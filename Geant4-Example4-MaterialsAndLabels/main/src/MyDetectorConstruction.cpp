@@ -61,12 +61,21 @@ void MyDetectorConstruction::DefineMaterials()
 	CsI->AddElement(I, .5);
 	CsI->AddElement(Cs, .5);
 
-	labMaterial = air;
-	trapezoidMaterial = G4H2Oliquid;
-	tetrahedronMaterial = bone;
-	coneMaterial = skin;
-	sphereMaterial = softTissue;
-	torusMaterial = softTissue;
+//	Prevent changing materials to default values if they were adjusted at run time:
+//	i.e. in case G4RunManager::GetRunManager()->ReinitializeGeometry() is invoked by
+//	some user command
+	if (labMaterial == nullptr)
+		labMaterial = air;
+	if (trapezoidMaterial == nullptr)
+		trapezoidMaterial = G4H2Oliquid;
+	if (tetrahedronMaterial == nullptr)
+		tetrahedronMaterial = bone;
+	if (coneMaterial == nullptr)
+		coneMaterial = skin;
+	if (sphereMaterial == nullptr)
+		sphereMaterial = softTissue;
+	if (torusMaterial == nullptr)
+		torusMaterial = softTissue;
 }
 
 G4VPhysicalVolume* MyDetectorConstruction::ConstructDetector()
@@ -99,6 +108,10 @@ G4VPhysicalVolume* MyDetectorConstruction::ConstructDetector()
 			G4Colour(0.71, 0.4, 0.11, opacity));
 	brown->SetVisibility(true);
 	brown->SetForceSolid(true);
+
+	G4VisAttributes *green = new G4VisAttributes(G4Colour(0, 1, 0, opacity));
+	green->SetVisibility(true);
+	green->SetForceSolid(true);
 
 	solidLab = new G4Box("Lab",          //name
 						halfLabSize.x(), halfLabSize.y(), halfLabSize.z());
